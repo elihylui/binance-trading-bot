@@ -10,10 +10,10 @@ def query_binance_status():
         raise ConnectionError
 
 # Function to query account
-def query_account(api_key, secret_key):
+def query_account(api_key, api_secret):
     return Spot(
         api_key = api_key,
-        secret_key = secret_key,
+        api_secret = api_secret,
         base_url = 'https://testnet.binance.vision',
     ).account()
 
